@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Explore the world of Hextech and Piltover's greatest innovators. Discover the lore, technology, and pioneers of Arcane's universe." />
+    <meta name="keywords" content="Hextech, Arcane, Piltover, Viktor, Jayce, Jinx, Caitlyn, League of Legends, Innovators" />
+    <meta name="author" content="Hextech Innovators" />
+    <title>Arcane Hextech Theme | Discover the Innovators</title>
+
+    <!-- Open Graph Meta Tags for Social Media Sharing -->
+    <meta property="og:title" content="Arcane Hextech Theme | Discover the Innovators" />
+    <meta property="og:description" content="Dive into the world of Hextech and uncover the mysteries of Piltover's greatest minds." />
+    <meta property="og:image" content="preview.jpg" />
+    <meta property="og:url" content="https://yourwebsite.com" />
+    <meta property="og:type" content="website" />
+
+    <!-- Tailwind CSS (via CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- GSAP (for animations) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <!-- AOS (for scroll animations) -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" /> -->
+
+    <!-- Font Awesome (for icons) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="./src/css/1.css" />
+  </head>
+
+  <body class="bg-gray-900 text-white">
+    <!-- Hero Section with Background Video -->
+    <section id="hero" class="relative h-screen flex flex-col items-center justify-center">
+      <video autoplay muted loop id="bg-video" class="absolute top-0 left-0 w-full h-full object-cover -z-10">
+        <source
+        src="https://cmsassets.rgpub.io/sanity/files/dsfx7636/news/8ca377434ec75445478d3d5d88acbd2aa5e8e86c.mp4"
+        type="video/mp4"
+      />
+      </video>
+      <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+      <header class="absolute top-0 w-full flex justify-between items-center p-6 z-10">
+        <button class="burger text-4xl cursor-pointer hover:text-amber-400 hover:scale-105" onclick="toggleSidePanel()">&#9776;</button>
+        <h1 class="logo text-3xl font-bold tracking-widest hover:scale-105`">HEXTECH</h1>
+      </header>
+      <div class="text-center z-10 animate__animated animate__fadeIn">
+        <h1 class="text-5xl font-bold text-lime-400">Enter Piltover</h1>
+        <p class="text-xl mt-4">Discover the mysteries of Hextech.</p>
+        <a href="./2.htm" class="mt-6 inline-block px-6 py-3 text-lg font-semibold text-black bg-gradient-to-r from-violet-700 to-cyan-400 rounded shadow-md hover:shadow-lg transform hover:scale-105 transition">Explore Now</a>
+      </div>
+    </section>
+
+    <!-- Side Panel for Navigation -->
+    <nav id="sidePanel" class="fixed top-0 left-[-250px] w-[250px] h-full bg-gray-900 bg-opacity-90 transition-all duration-200 p-6 z-20">
+      <button class="close-btn absolute top-4 right-4 text-2xl hover:text-amber-400 hover:scale-105" onclick="closeSidePanel()">&times;</button>
+      <ul class="space-y-4 mt-10">
+        <li><a href="#hero" class="block text-white text-lg hover:text-cyan-400">Home</a></li>
+        <li><a href="#bios" class="block text-white text-lg hover:text-cyan-400">Innovators</a></li>
+        <li><a href="#" class="block text-white text-lg hover:text-cyan-400">Tech</a></li>
+        <li><a href="#" class="block text-white text-lg hover:text-cyan-400">Gallery - soon</a></li>
+        <li><a href="#" class="block text-white text-lg hover:text-cyan-400">Downloads - soon</a></li>
+
+      </ul>
+    </nav>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 font-bold text-red-500 text-center py-4">
+      <p class="inline-block cursor-pointer">&copy; 2025 Hextech Innovators | All Rights Reserved</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+      function toggleSidePanel() {
+        gsap.to("#sidePanel", { left: 0, duration: 0.3, ease: "power2.out" });
+      }
+      function closeSidePanel() {
+        gsap.to("#sidePanel", { left: "-250px", duration: 0.3, ease: "power2.in" });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+/* style.css *//* src/styles.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  background-color: #1f2937; /* Tailwind's gray-800 equivalent */
+  color: white;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Hero Section Text */
+#hero h1 {
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Glow effect */
+}
+
+.glow-text {
+  color: #A7F3D0; /* Tailwind's lime-400 equivalent */
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+/* Burger Icon Styles */
+.burger {
+  cursor: pointer;
+  color: white;
+  font-size: 36px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.burger:hover {
+  transform: rotate(90deg);
+}
+
+/* Side Panel Styles */
+#sidePanel {
+  background-color: rgba(31, 41, 55, 0.9); /* Tailwind's gray-900 with transparency */
+  padding: 20px;
+  box-sizing: border-box;
+  transition: left 0.3s ease-in-out;
+}
+/* Bio Card Styles */
+.bio-card {
+  background-color: #2d3748; /* Tailwind's gray-900 */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+  display: flex; /* Ensure they are block-level for their container */
+  flex-direction: column; /* Stack items vertically */
+  align-items: flex-start; /* Align content */
+  min-height: 200px; /* Add a minimum height to make sure they are visible */
+  opacity: 1 !important; /* Ensure visibility */
+  visibility: visible !important;
+  transition: opacity 0.3s ease;
+}
+
+.bio-card:hover {
+  transform: scale(1.05);
+}
+
+.bio-card h3 {
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.bio-card p {
+  font-size: 1rem;
+  color: #e2e8f0; /* Tailwind's gray-300 */
+}
+
+/* Modal Styles */
+#bioModal {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 40px;
+}
+
+.modal-content {
+  background-color: #2d3748; /* Tailwind's gray-900 */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  width: 90%;
+  max-width: 500px;
+}
+
+.modal-content h3 {
+  font-size: 2rem;
+  color: #38bdf8; /* Tailwind's cyan-400 */
+}
+
+.modal-content img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* Close Button in Modal */
+.close-btn {
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #38bdf8; /* Tailwind's cyan-400 */
+}

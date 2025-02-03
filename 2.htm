@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Header with Burger Menu</title>
+    <link rel="stylesheet" href="./src/css/2.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Uncial+Antiqua&family=Pirata+One&family=Lustria&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        /* Custom Arcane Colors */
+        :root {
+            --arcane-teal: #00A9A5;
+            --arcane-hextech: #FFD700;
+            --arcane-viRed: #A30000;
+            --arcane-jinxPink: #FF1E56;
+            --arcane-shadow: #2A2E37;
+            --arcane-darkSludge: #1F3326;
+            --arcane-smokeGray: #2A2E37;
+            --arcane-hextechGold: #FFD700;
+        }
+
+        /* Body and padding setup */
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Burger Button */
+        #menu-button {
+            font-size: 2rem;
+            color: black;
+            cursor: pointer;
+            transition: opacity 0.3s ease, color 0.3s ease;
+        }
+
+        #menu-button:hover {
+            color: var(--arcane-hextechGold);
+        }
+
+        /* Burger Position */
+        #burger-container {
+            position: absolute;
+            left: 20px; /* Adjust the left margin */
+            top: 20px; /* Adjust the distance from the top */
+            z-index: 100;
+        }
+
+        /* Hide navigation initially */
+        #dropdown-menu {
+            transform: translateY(-100%); /* Hide by default */
+            transition: transform 0.3s ease;
+        }
+
+        #dropdown-menu.active {
+            transform: translateY(0); /* Slide down when active */
+        }
+
+        /* Navigation Links Style */
+        #dropdown-menu ul {
+            list-style: none;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        #dropdown-menu li {
+            margin: 0;
+        }
+
+        #dropdown-menu li a {
+            color: var(--arcane-viRed);
+            font-size: 1.5rem;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+
+        #dropdown-menu li a:hover {
+            color: var(--arcane-hextechGold);
+        }
+
+        /* Main Content */
+        #main-text {
+            margin-top: 20vh;
+        }
+        main{
+             height: 70vh;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-red-500">
+
+    <!-- Header -->
+    <header class="bg-white border-b border-gray-300 shadow-md fixed top-0 left-0 w-full z-50">
+        <div class="container mx-auto px-6 py-4 text-center relative">
+            <!-- Title and Description -->
+            <div class="mx-auto">
+                <h1 class="font-[Cinzel] text-4xl sm:text-5xl text-red-700">
+                    Piltover
+                </h1>
+                <p class="font-[Lustria] text-lg text-gray-600">Discover the mysteries of Hextech.</p>
+            </div>
+
+            <!-- Always Visible Burger Button -->
+            <div id="burger-container">
+                <button id="menu-button" class="text-2xl text-black hover:text-var(--arcane-hextechGold)">
+                    &#9776; <!-- Hamburger icon -->
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Dropdown Menu -->
+    <nav id="dropdown-menu" class="bg-white w-full">
+        <div class="container mx-auto px-6 py-2">
+            <ul class="flex flex-col sm:flex-row space-x-0 sm:space-x-6 justify-center text-center">
+                <li><a href="#" class="text-red-600 hover:text-red-700">Home</a></li>
+                <li><a href="#" class="text-red-600 hover:text-red-700">About</a></li>
+                <li><a href="#" class="text-red-600 hover:text-red-700">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <section id="main-text" class="container mx-auto px-6 py-4 w-4/5 sm:w-3/5 lg:w-1/2 text-gray-400">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quidem, blanditiis voluptas vero ratione
+            facere id quos similique soluta, repellendus molestiae ab, optio eveniet autem mollitia quo molestias!...
+        </section>
+    </main><br><hr>
+<br><br>to be continued!
+    <script>
+        const menuButton = document.getElementById('menu-button');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        // Toggle dropdown visibility on click
+        menuButton.addEventListener('click', () => {
+            dropdownMenu.classList.toggle('active'); // Slide in/out the menu
+        });
+    </script>
+
+</body>
+
+</html>

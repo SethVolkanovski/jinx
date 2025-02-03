@@ -1,0 +1,82 @@
+     /* Custom Arcane Colors */
+     :root {
+        --arcane-teal: #00A9A5;
+        --arcane-hextech: #FFD700;
+        --arcane-shimmer: #64FFDA;
+        --arcane-piltover: #0074E4;
+        --arcane-viRed: #A30000;
+        --arcane-jinxPink: #FF1E56;
+        --arcane-zaunViolet: #431C5D;
+        --arcane-shadow: #2A2E37;
+        --arcane-steel: #9E9E9E;
+        --arcane-hextechGold: #FFD700;
+        --arcane-hextechGold: #FFD700;
+        --arcane-hexcoreGlow: #E5C100;
+        --arcane-piltoverBronze: #A87D4E;
+        --arcane-shimmerGold: #A67C00;
+        --arcane-viRedCrimson: #A30000;
+        --arcane-zaunRustRed: #741B1B;
+        --arcane-jinxExplosion: #D81E5B;
+        --arcane-bloodstained: #600020;
+        --arcane-shimmerGreen: #64FFDA;
+        --arcane-zaunGasGreen: #3FA34D;
+        --arcane-darkSludge: #1F3326;
+        --arcane-hexcoreGreen: #42F56F;
+        --arcane-undercityBlack: #121212;
+        --arcane-smokeGray: #2A2E37;
+        --arcane-gunmetalGray: #4F5055;
+        --arcane-piltoverSteel: #9E9E9E;
+    }
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    padding-top: 20vh;
+}
+
+#menu-button {
+    transition: opacity 0.5s ease; /* Smooth transition for opacity */
+}
+/* Custom styles for the dropdown menu */
+#dropdown-menu {
+    transition: all 0.3s ease;
+}
+
+#dropdown-menu.hidden {
+    display: none;
+}
+
+/* Smaller padding for the dropdown menu */
+.dropdown-content {
+    padding: 0.5rem 0;
+}
+
+/* Custom burger button */
+#menu-button {
+    font-size: 2rem;
+    color: var(--arcane-viRed);
+    cursor: pointer;
+
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+#menu-button:hover {
+    color: var(--arcane-viRedCrimson);
+}
+
+/* Positioning the burger icon */
+#burger-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -20px; /* Adjust the distance from the bottom */
+}
+#main-text {
+    margin-top: 20vh;
+}
+
