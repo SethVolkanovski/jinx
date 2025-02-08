@@ -1,84 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Explore the world of Hextech and Piltover's greatest innovators. Discover the lore, technology, and pioneers of Arcane's universe." />
-    <meta name="keywords" content="Hextech, Arcane, Piltover, Viktor, Jayce, Jinx, Caitlyn, League of Legends, Innovators" />
-    <meta name="author" content="Hextech Innovators" />
-    <title>Arcane Hextech Theme | Discover the Innovators</title>
 
-    <!-- Open Graph Meta Tags for Social Media Sharing -->
-    <meta property="og:title" content="Arcane Hextech Theme | Discover the Innovators" />
-    <meta property="og:description" content="Dive into the world of Hextech and uncover the mysteries of Piltover's greatest minds." />
-    <meta property="og:image" content="preview.jpg" />
-    <meta property="og:url" content="https://yourwebsite.com" />
-    <meta property="og:type" content="website" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore the world of Hextech and Piltover's greatest innovators." />
+  <meta name="keywords" content="Hextech, Arcane, Piltover, Viktor, Jayce, Jinx, Caitlyn, League of Legends" />
+  <meta name="author" content="Hextech Innovators" />
+  <title>Arcane Hextech Theme | Discover the Innovators</title>
 
-    <!-- Tailwind CSS (via CDN) -->
-    <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- GSAP (for animations) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
-    <!-- AOS (for scroll animations) -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" /> -->
+  <!-- Google Fonts (Optimized) -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Cinzel:wght@400;700&family=Forum&family=Orbitron:wght@400;700&family=Teko:wght@400;700&family=Exo+2:wght@400;700&family=Rock+Salt&family=Caveat:wght@400;700&family=Permanent+Marker&display=swap"
+    rel="stylesheet" />
 
-    <!-- Font Awesome (for icons) -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;700&family=Uncial+Antiqua&family=Cinzel:wght@400;700&family=Forum&family=Orbitron:wght@400;700&family=Teko:wght@400;700&family=Exo+2:wght@400;700&family=Rock+Salt&family=Caveat:wght@400;700&family=Permanent+Marker&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;700&family=Uncial+Antiqua&family=Cinzel:wght@400;700&family=Forum&family=Orbitron:wght@400;700&family=Teko:wght@400;700&family=Exo+2:wght@400;700&family=Rock+Salt&family=Caveat:wght@400;700&family=Permanent+Marker&family=MedievalSharp&family=Rakkas&family=IM+Fell+English+SC&family=Pirata+One&family=Abril+Fatface&family=Press+Start+2P&family=Black+Ops+One&family=Bungee+Shade&family=Bungee+Inline&family=Fredericka+the+Great&family=Monoton&family=Special+Elite&family=VT323&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;700&family=Uncial+Antiqua&family=Cinzel:wght@400;700&family=Forum&family=Orbitron:wght@400;700&family=Teko:wght@400;700&family=Exo+2:wght@400;700&family=Rock+Salt&family=Caveat:wght@400;700&family=Permanent+Marker&family=MedievalSharp&family=Rakkas&family=IM+Fell+English+SC&family=Pirata+One&family=Abril+Fatface&family=Press+Start+2P&family=Black+Ops+One&family=Bungee+Shade&family=Bungee+Inline&family=Fredericka+the+Great&family=Monoton&family=Special+Elite&family=VT323&family=Almendra+SC&family=Caudex&family=Eagle+Lake&family=Gloock&family=Jomhuria&family=Metamorphous&family=Nosifer&family=Prosto+One&family=Rubik+Glitch&family=Sancreek&family=Underdog&family=Yatra+One&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./src/css/1.css" />  <link
+  href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;700&family=Uncial+Antiqua&family=Cinzel:wght@400;700&family=Forum&family=Orbitron:wght@400;700&family=Teko:wght@400;700&family=Exo+2:wght@400;700&family=Rock+Salt&family=Caveat:wght@400;700&family=Permanent+Marker&display=swap"
+  rel="stylesheet">
 
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="./src/css/1.css" />
-  </head>
+</head>
 
-  <body class="bg-gray-900 text-white">
-    <!-- Hero Section with Background Video -->
-    <section id="hero" class="relative h-screen flex flex-col items-center justify-center">
-      <video autoplay muted loop id="bg-video" class="absolute top-0 left-0 w-full h-full object-cover -z-10">
-        <source
-        src="https://cmsassets.rgpub.io/sanity/files/dsfx7636/news/8ca377434ec75445478d3d5d88acbd2aa5e8e86c.mp4"
-        type="video/mp4"
-      />
-      </video>
-      <div class="absolute inset-0 bg-black bg-opacity-60"></div>
-      <header class="absolute top-0 w-full flex justify-between items-center p-6 z-10">
-        <button class="burger text-4xl cursor-pointer hover:text-amber-400 hover:scale-105" onclick="toggleSidePanel()">&#9776;</button>
-        <h1 class="logo text-3xl font-bold tracking-widest hover:scale-105`">HEXTECH</h1>
-      </header>
-      <div class="text-center z-10 animate__animated animate__fadeIn">
-        <h1 class="text-5xl font-bold text-lime-400">Enter Piltover</h1>
-        <p class="text-xl mt-4">Discover the mysteries of Hextech.</p>
-        <a href="./2.htm" class="mt-6 inline-block px-6 py-3 text-lg font-semibold text-black bg-gradient-to-r from-violet-700 to-cyan-400 rounded shadow-md hover:shadow-lg transform hover:scale-105 transition">Explore Now</a>
+<body class="bg-gray-900 text-white">
+  <!-- Hero Section with Background Video -->
+  <section id="hero" class="relative h-screen flex flex-col items-center justify-center">
+    <video autoplay muted loop id="bg-video" class="absolute top-0 left-0 w-full h-full object-cover -z-10">
+      <source src="https://cmsassets.rgpub.io/sanity/files/dsfx7636/news/8ca377434ec75445478d3d5d88acbd2aa5e8e86c.mp4"
+        type="video/mp4" />
+    </video>
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+    <header class="fixed top-0 w-full flex justify-between items-center p-6 z-50">
+      <button class="burger text-3xl cursor-pointer hover:text-amber-400 hover:scale-105" onclick="toggleSidePanel()">
+        &#9776;
+      </button>
+      <h1 class="logo text-3xl font-bold tracking-widest hover:scale-105 cursor-pointer hover:text-amber-400">
+        HEXTECH
+      </h1>
+    </header>
+
+    <div class="text-center z-10 animate__animated animate__fadeIn">
+      <h1 class="text-5xl font-bold text-amber-400" style="font-family: 'Uncial Antiqua', serif">
+        ENTER PILTOVER
+      </h1>
+      <p class="text-xl mt-4 font-[Cinzel] tracking-wide cursor-default">
+        Discover the mysteries of Hextech.
+      </p>
+      <a href="#jinx-intro"
+        class="mt-6 inline-block px-6 py-3 text-lg bg-amber-300 opacity-70 hover:opacity-100 rounded shadow-md hover:shadow-lg transform hover:scale-105 hover:text-black hover:bg-amber-400 transition  font-[Julius]">
+        Explore Now
+      </a>
+    </div>
+  </section>
+
+  <!-- Side Panel for Navigation -->
+  <nav id="sidePanel"
+    class="fixed top-0 left-[-280px] w-[280px] h-full bg-gray-900 bg-opacity-90 transition-all duration-500 ease-out p-6 z-50">
+    <button class="close-btn absolute top-4 right-4 text-3xl cursor-pointer text-cyan-400 hover:text-amber-400"
+      onclick="closeSidePanel()">
+      &times;
+    </button>
+    <ul class="space-y-4 mt-10" style="font-family: 'Uncial Antiqua', serif">
+      <li>
+        <a href="1.htm" class="block text-white text-lg hover:text-cyan-400">Home</a>
+      </li>
+      <li>
+        <a href="#bios" class="block text-white text-lg hover:text-cyan-400">Innovators</a>
+      </li>
+      <li>
+        <a href="#" class="block text-white text-lg hover:text-cyan-400">Tech</a>
+      </li>
+      <li>
+        <a href="#" class="block text-white text-lg hover:text-cyan-400">Gallery - soon</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Jinx's Chaos Intro Section -->
+  <div>
+    <section id="jinx-intro" class="relative mt-12 text-center h-[20vh] py-16 ">
+      <div class="max-w-4xl mx-auto px-6">
+        <h3 class="text-pink-400 text-4xl font-bold font-[Rock Salt] animate-pulse"
+          style="font-family: 'Rock Salt', cursive; ">
+          BOOM! Welcome, LOSERS!
+        </h3>
+        <br>
+        <script src="https://cdn.lordicon.com/lordicon.js"></script>
+        <script src="https://cdn.lordicon.com/lordicon.js"></script>
+        <script src="https://cdn.lordicon.com/lordicon.js"></script>
+        <lord-icon src="https://cdn.lordicon.com/knitbwfa.json" trigger="hover"
+          colors="primary:#121331,secondary:#ffffff,tertiary:#000000,quaternary:#3080e8,quinary:#ffffff,senary:#ffffff"
+          style="width:50px;height:50px">
+        </lord-icon>
+        <h4 class="mt-4 text-l font-[Caveat] text-amber-400 tracking-widest"
+          style="font-family: 'Uncial Antiqua', serif">
+          "Hope ya weren’t expectin’ a safe tour!"
+        </h4>
+
+
+
+        <!-- <p class="text-lg" style="font-family: 'Almendra SC', serif;">Prophecy of the Stars</p> -->
+        <p class="text-lg pr-4 my-4 mb-4 float-right" style="font-family: 'MedievalSharp', cursive;">- A Knight's Oath</p>
       </div>
-    </section>
+    </section><br><br><br><br>
+  </div>
 
-    <!-- Side Panel for Navigation -->
-    <nav id="sidePanel" class="fixed top-0 left-[-250px] w-[250px] h-full bg-gray-900 bg-opacity-90 transition-all duration-200 p-6 z-20">
-      <button class="close-btn absolute top-4 right-4 text-2xl hover:text-amber-400 hover:scale-105" onclick="closeSidePanel()">&times;</button>
-      <ul class="space-y-4 mt-10">
-        <li><a href="#hero" class="block text-white text-lg hover:text-cyan-400">Home</a></li>
-        <li><a href="#bios" class="block text-white text-lg hover:text-cyan-400">Innovators</a></li>
-        <li><a href="#" class="block text-white text-lg hover:text-cyan-400">Tech</a></li>
-        <li><a href="#" class="block text-white text-lg hover:text-cyan-400">Gallery - soon</a></li>
-        <li><a href="#" class="block text-white text-lg hover:text-cyan-400">Downloads - soon</a></li>
-
-      </ul>
-    </nav>
+  <br><br><br><br> <!-- Hextech Gallery Section -->
+  <section id="gallery" class="bg-gray-900 h-[80vh] py-20 mt-15 text-center">
 
 
-    <!-- Footer -->
-    <footer class="bg-gray-100 font-bold text-red-500 text-center py-4">
-      <p class="inline-block cursor-pointer">&copy; 2025 Hextech Innovators | All Rights Reserved</p>
-    </footer>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-6 max-w-6xl mx-auto">
+      <!-- Image 1 -->
+      <img src="./src/img/9520539.jpg" alt="Hextech Device 1"
+        class="gallery-img cursor-pointer rounded-lg shadow-md hover:scale-105 transition" onclick="openModal(this)" />
+      <!-- Image 2 -->
+      <img src="./src/img/8379469.png" alt="Hextech Device 2"
+        class="gallery-img cursor-pointer rounded-lg shadow-md hover:scale-105 transition" onclick="openModal(this)" />
+      <!-- Image 3 -->
+      <img src="./src/img/8484909.jpg" alt="Hextech Device 3"
+        class="gallery-img cursor-pointer rounded-lg shadow-md hover:scale-105 transition" onclick="openModal(this)" />
+      <!-- Image 4 -->
+        <!-- Image 1 -->
+        <!-- Image 2 -->
+        <img src="./src/img/9520542.jpg" alt="Hextech Device 2"
+          class="gallery-img cursor-pointer rounded-lg shadow-md hover:scale-105 transition" onclick="openModal(this)" />
+        <!-- Image 3 -->
+        <!-- Image 4 -->
+    </div>
+<br><br>
+    <button>
+    <a>more btn somewhere</a></button>
+  </section>
 
-    <!-- JavaScript -->
-    <script>
-      function toggleSidePanel() {
-        gsap.to("#sidePanel", { left: 0, duration: 0.3, ease: "power2.out" });
+  <!-- Modal for Enlarged Image -->
+  <div id="modal" class="z-50 fixed inset-0 bg-black bg-opacity-80 hidden flex items-center justify-center">
+    <img id="modal-img" class="max-w-[80%] max-h-[80%] rounded-lg shadow-lg" />
+    <button class="absolute top-15 right-6 text-white text-4xl font-bold" onclick="closeModal()">
+      &times;
+    </button>
+  </div>
+
+
+
+
+  <div id="more" class="min-h-[100vh] border border-white w-[95%] mx-auto rounded-md bg-gray-800">
+    <div id="info" class="flex flex-col md:flex-row items-center justify-between gap-8 px-8 py-12">
+      <img
+      src="./src/img/9262435.jpg"
+      alt=""
+      class="w-full md:w-[20%] object-cover aspect-video ml-0 md:ml-12 mt-8 md:mt-0"
+  >
+  <p class="text-white text-sm md:text-base leading-relaxed px-5 py-8 md:p-0 max-w-[70%]">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur officia quis quidem adipisci blanditiis. Quasi impedit molestiae eum iste ipsam?
+  </p>
+    </div>
+</div>
+  </div><br><br>
+<hr><br><br><br>
+
+
+
+
+
+
+
+
+  <!-- Footer -->
+  <footer class="bg-amber-400 font-bold text-red-500 text-center py-4">
+    <p class="block text-black">&copy; 2025 Hextech Innovators | All Rights Reserved</p>
+  </footer>
+
+
+  <script>
+    function openModal(img) {
+      document.getElementById("modal-img").src = img.src;
+      gsap.to("#modal", { opacity: 1, display: "flex", duration: 0.3 });
+    }
+
+    function closeModal() {
+      gsap.to("#modal", {
+        opacity: 0,
+        duration: 0.3,
+        onComplete: () => {
+          document.getElementById("modal").style.display = "none";
+        },
+      });
+    }
+
+    function toggleSidePanel() {
+      gsap.to("#sidePanel", { left: 0, duration: 0.3, ease: "power2.out" });
+    }
+
+    function closeSidePanel() {
+      gsap.to("#sidePanel", {
+        left: "-280px",
+        duration: 0.3,
+        ease: "power2.in",
+      });
+    }
+
+    document.addEventListener("click", function (event) {
+      const sidePanel = document.getElementById("sidePanel");
+      const burger = document.querySelector(".burger");
+
+      if (!sidePanel.contains(event.target) && !burger.contains(event.target)) {
+        closeSidePanel();
       }
-      function closeSidePanel() {
-        gsap.to("#sidePanel", { left: "-250px", duration: 0.3, ease: "power2.in" });
+    });
+
+    window.addEventListener("scroll", function () {
+      const header = document.querySelector("header");
+      if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
       }
-    </script>
-  </body>
+    });
+
+    gsap.from("header", {
+      opacity: 0,
+      y: -50,
+      duration: 1.2,
+      ease: "power2.out",
+    });
+
+    gsap.from(".burger, .logo", {
+      opacity: 0,
+      scale: 0.8,
+      duration: 1.5,
+      delay: 0.6,
+      ease: "power2.out",
+    });
+  </script>
+</body>
+
 </html>
